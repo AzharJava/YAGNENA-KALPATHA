@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "300949626559",
+    "project_id": "yagnena-kalpatha",
+    "storage_bucket": "yagnena-kalpatha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300949626559:android:84137b8b527e97e1f7700a",
+        "android_client_info": {
+          "package_name": "com.example.yagnena_kalpatha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300949626559-4o32ocsn0el7147nkp9vf3pkt9mh3hcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQnwqQrGPIiZaUpkxiLI6khbv-RDRJDVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300949626559-4o32ocsn0el7147nkp9vf3pkt9mh3hcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
