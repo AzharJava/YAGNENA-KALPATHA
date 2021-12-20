@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         color: Colors.blue,
-        child: Text("hello friend welcomein this project"),
+        child: Text("hello friend welcomein this project dfghjkhgfhbj fdghjg"),
       ),
     );
   }
