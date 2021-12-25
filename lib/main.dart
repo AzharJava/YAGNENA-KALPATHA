@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yagnena_kalpatha/screens/authnatication/login_screen.dart';
+
 import 'package:yagnena_kalpatha/screens/widgets/home_screen.dart';
 
 void main() {
