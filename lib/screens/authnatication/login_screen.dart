@@ -6,7 +6,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("hello friend welcomein this project")),
-    );
+        body: Container(
+      height: 100,
+      width: 100,
+      child: Text("ghbjkml,;kjhgfhbjknm,"),
+    ));
   }
 }
