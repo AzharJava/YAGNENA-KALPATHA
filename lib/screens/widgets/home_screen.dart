@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:yagnena_kalpatha/constants/colors.dart';
 import 'package:yagnena_kalpatha/shared/widgets/appbar.dart';
 import 'package:yagnena_kalpatha/shared/widgets/bottom_navigaion.dart';
@@ -15,7 +16,11 @@ class HomeScreen extends StatelessWidget {
         bottomNavigationBar: BottomNavigation(),
         appBar: AppBar(
           backgroundColor: AppColors.butterscotch,
-          title: Text("Yagnena Kalpatha @"),
+          title: Text(
+            "Yagnena Kalpatha @",
+            style:
+                TextStyle(fontFamily: "Helvetica", fontWeight: FontWeight.w500),
+          ),
           actions: [AppBars()],
         ),
         body: ListView.builder(

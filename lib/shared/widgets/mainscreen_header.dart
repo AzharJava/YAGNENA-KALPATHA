@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MainScreenHeader extends StatelessWidget {
   const MainScreenHeader({Key? key}) : super(key: key);
 
@@ -22,17 +23,19 @@ class MainScreenHeader extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text("Name of Candidate  #"),
-                      Text("skill"),
+                      Text("Name of Candidate #\nSkill:I am app dev"),
                     ],
                   ),
                   Column(
                     children: [
                       Container(
-                        height: 25,
+                        height: 27,
                         width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                         child: Center(child: Text("Cindrlla")),
-                        color: Colors.red,
                       ),
                       SizedBox(
                         height: 5,
@@ -43,7 +46,7 @@ class MainScreenHeader extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Row(
                     children: [

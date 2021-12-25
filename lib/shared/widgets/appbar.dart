@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yagnena_kalpatha/constants/colors.dart';
+import 'package:yagnena_kalpatha/screens/widgets/profile_details.dart';
 
 class AppBars extends StatelessWidget {
   const AppBars({Key? key}) : super(key: key);
@@ -18,9 +19,17 @@ class AppBars extends StatelessWidget {
             children: [
               GestureDetector(child: Icon(Icons.search)),
               IconButton(onPressed: () {}, icon: Icon(Icons.upload_sharp)),
-              CircleAvatar(
-                radius: 10,
-                backgroundColor: AppColors.white,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProfileDetails()));
+                },
+                child: CircleAvatar(
+                  radius: 10,
+                  backgroundColor: AppColors.white,
+                ),
               )
             ],
           )
