@@ -6,14 +6,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Yagnena kalpatha"),
-        backgroundColor: Colors.red,
-      ),
-      body: Container(
-        color: Colors.blue,
-        child: Text("hello friend welcomein this project dfghjkhgfhbj fdghjg"),
-      ),
+<
     );
   }
 }

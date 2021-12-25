@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yagnena_kalpatha/screens/authnatication/login_screen.dart';
+import 'package:yagnena_kalpatha/screens/widgets/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
