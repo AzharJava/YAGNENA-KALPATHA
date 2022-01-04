@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Center(
             child: Card(
               elevation: 5,
-              color: AppColors.greyColor,
+              color: AppColors.warm_grey,
               shape: RoundedRectangleBorder(
                   side: BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(10)),
