@@ -7,4 +7,6 @@ class RegexExpressions {
   static RegExp alphanumeric = RegExp(r'^[a-zA-Z0-9]+$');
   static RegExp year = RegExp(r"^\d{4}$");
   static RegExp phoneNumber = RegExp(r"^\d{10}$");
+  static RegExp passwordCheck =
+      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
 }

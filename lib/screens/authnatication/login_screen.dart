@@ -3,6 +3,7 @@ import 'package:yagnena_kalpatha/constants/colors.dart';
 import 'package:yagnena_kalpatha/constants/strings.dart';
 import 'package:yagnena_kalpatha/screens/widgets/intro_screen.dart';
 import 'package:yagnena_kalpatha/shared/validation/validator.dart';
+import 'package:yagnena_kalpatha/shared/widgets/custom_button.dart';
 import 'package:yagnena_kalpatha/shared/widgets/text_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -15,9 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController password = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   GlobalKey globalKey = GlobalKey();
-
-  String? emailValue = "";
-  String? passwordValue = "";
 
   @override
   Widget build(BuildContext context) {
@@ -50,53 +48,43 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 40,
                     ),
-                    InputTextField(
-                      onChanged: (val) {
-                        setState(() {
-                          emailValue = email.text;
-                        });
-                      },
+                    InputField(
                       controller: email,
-                      customeValidator: true,
-                      validate: (emailValue) =>
-                          Validator.checkEmail(email: emailValue)
-                              ? "Email not valid"
-                              : "",
-                      hintText: "Enter emai...",
-                      lableText: "email",
-                      obsecureText: false,
-                      textInputType: TextInputType.emailAddress,
-                      onTap: () async {
-                        await Future.delayed(Duration(milliseconds: 500));
-                        RenderObject? object =
-                            globalKey.currentContext!.findRenderObject();
-                        object!.showOnScreen();
+                      hintText: "Enter Email here....",
+                      keyboardType: TextInputType.emailAddress,
+                      lableText: "Email",
+                      obSecureText: false,
+                      onFieldTap: () {},
+                      onSubmitField: () {},
+                      prefixIcon: Icon(
+                        Icons.email,
+                        color: Colors.black,
+                      ),
+                      focusBorderColor: Colors.black,
+                      erroBorderColor: AppColors.emergencyColor,
+                      validator: (String? value) {
+                        Validator.checkEmail(email: email.text);
                       },
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    InputTextField(
-                      onChanged: (val) {
-                        setState(() {
-                          emailValue = email.text;
-                        });
-                      },
+                    InputField(
                       controller: email,
-                      customeValidator: true,
-                      validate: (emailValue) =>
-                          Validator.checkEmail(email: emailValue)
-                              ? "Email not valid"
-                              : "",
-                      hintText: "Enter Password.... ",
+                      hintText: "Enter password",
+                      keyboardType: TextInputType.emailAddress,
                       lableText: "Password",
-                      obsecureText: true,
-                      textInputType: TextInputType.emailAddress,
-                      onTap: () async {
-                        await Future.delayed(Duration(milliseconds: 500));
-                        RenderObject? object =
-                            globalKey.currentContext!.findRenderObject();
-                        object!.showOnScreen();
+                      obSecureText: true,
+                      onFieldTap: () {},
+                      onSubmitField: () {},
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.black,
+                      ),
+                      focusBorderColor: Colors.black,
+                      erroBorderColor: AppColors.emergencyColor,
+                      validator: (String? value) {
+                        Validator.checkEmail(email: email.text);
                       },
                     ),
                     SizedBox(
@@ -106,27 +94,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 10,
                     ),
-                    InkWell(
-                      key: globalKey,
-                      onTap: () {
-                        if (_formKey.currentState!.validate()) {
-                          if (Validator.checkEmail(email: emailValue)) {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => IntroPage()));
-                          } else if (Validator.checkEmail(email: emailValue)) {}
-                        }
-                      },
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.05,
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.cyan),
-                        child: Center(child: Text("Login In")),
-                      ),
-                    ),
+                    CustomButton(
+                        onTap: () {},
+                        text: "Login",
+                        buttonColor: AppColors.AUDIO_CALL,
+                        borderRadius: BorderRadius.circular(16),
+                        textColor: Colors.white,
+                        splashColor: Colors.white,
+                        borderSideColor: Colors.green),
                     SizedBox(
                       height: 10,
                     ),

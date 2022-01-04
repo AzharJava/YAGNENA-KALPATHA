@@ -56,4 +56,11 @@ class Validator {
     else if (string.trim().isEmpty) return true;
     return false;
   }
+
+  static passwordValidate(String value) {
+    if (value.isEmpty) {
+      return "Please enter password";
+    }
+    return null;
+  }
 }
