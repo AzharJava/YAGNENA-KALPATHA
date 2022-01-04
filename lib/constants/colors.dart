@@ -9,6 +9,8 @@ class AppColors {
   static const Color leading_color = Colors.black;
   static const Color hintTextColor = Colors.grey;
   static const Color headingTextColor = Color(0x054c5c);
+  static Color doctorCardBorder = Color(0xffc1c1c1);
+
   static Color appBarColor = _hexToColor('bdefeb');
   static const Color dark_turquoise = Color(0xff054c5c);
   static Color heading = _hexToColor('0a97b7');
